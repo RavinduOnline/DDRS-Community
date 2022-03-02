@@ -1,1 +1,1 @@
-# DDRS-Community
+# Developers & Designers Runtime Support Community

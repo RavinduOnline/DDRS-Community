@@ -1,0 +1,22 @@
+import React from 'react';
+import {BrowserRouter, Router , Routes , Route} from "react-router-dom"
+
+import Home from './components/Header/header';
+import NotFound from './components/Pages/404/notfound';
+
+import './App.css';
+
+
+function App() {
+  return (
+    <BrowserRouter>
+        <Routes>
+              <Route exact path="/" element={<Home/>}/>
+              <Route path="*" element={<NotFound/>}/>
+        </Routes>
+    </BrowserRouter>
+  );
+}
+
+export default App;
+

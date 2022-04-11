@@ -2,6 +2,11 @@
 .header-main-box{
     min-height: 10vh;
     background-color: #001925 ;
+    display: flex;
+    position: sticky;
+    top: 0px;
+    z-index: 10000;
+    
 }
 
 .header-logo{

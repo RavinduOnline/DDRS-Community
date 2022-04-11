@@ -8,15 +8,15 @@ export default function header() {
   return (
             <div>
                                      {/* <!-- Navbar --> */}
-               <nav class="navbar navbar-expand-sm text-white header-main-box">
+               <nav className="navbar navbar-expand-sm text-white header-main-box">
                     {/* <!-- Container wrapper --> */}
-                    <div class="container-fluid">
+                    <div className="container-fluid">
                             {/* <!-- Collapsible wrapper --> */}
                             <div className='navbar-nav header-user-box'>
                                     {/* <!-- Navbar brand --> */}
-                                    <a href="#">
+                                    <a href="#Logo">
                                         <img
-                                        class="header-logo"
+                                        className="header-logo"
                                         src={Logo}
                                         alt="DDRS Logo"
                                         loading="lazy"

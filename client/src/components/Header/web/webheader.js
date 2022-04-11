@@ -7,7 +7,7 @@ export default function webheader() {
     <div>
 
                         {/* <!-- Right elements --> */}
-                 <div class="d-flex align-items-center  web-header-main-box">
+                 <div className="d-flex align-items-center  web-header-main-box">
                              <div className="web-menu-item">
                                     <a className='nav-link text-white text-uppercase' href="/">
                                         Home
@@ -26,15 +26,15 @@ export default function webheader() {
                             </div>
 
                         <div className='web-menu-user-box'>
-                                 <a  class="text-white web-menu-user-name-a" href="#" >
+                                 <a  className="text-white web-menu-user-name-a" href="#" >
                                     <img
                                         src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-                                        class="rounded-circle header-profile-pic "
+                                        className="rounded-circle header-profile-pic "
                                         alt="Profile Pic"
                                         loading="lazy"
                                     /> 
 
-                                     <div class="web-menu-user-name">Janith Dilshan</div>
+                                     <div className="web-menu-user-name">Janith Dilshan</div>
                                     </a>
                          </div>
                                 {/* <!-- Right elements --> */}

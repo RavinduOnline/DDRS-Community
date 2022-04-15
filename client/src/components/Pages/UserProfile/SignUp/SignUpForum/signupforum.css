@@ -1,0 +1,40 @@
+.signup-details {
+    margin: auto;
+    width: 30%;
+}
+
+.center {
+    margin: auto;
+    width: 70%;
+    border: 2px solid #131411;
+    padding: 10px;
+  }
+
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+    float: left;
+    width: 50%;
+  }
+
+/* Extra styles for the signup button */
+.signupbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+  }
+
+.button1 {
+    border-radius: 10px;
+    justify-content: center;
+}
+
+.center2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

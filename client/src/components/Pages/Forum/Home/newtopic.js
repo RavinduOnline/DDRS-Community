@@ -48,8 +48,7 @@ export default function home() {
                 <div className='newtopic-question-option'> 
                   <div className='newtopic-title'>
                     <small>Include all information someone would need to answer your question</small>
-                    <ReactQuill className="newtopic-react-quill" theme='snow'/>
-                  </div>
+                    </div>
                 </div>
 
 
@@ -57,7 +56,7 @@ export default function home() {
             </div>
             <div className='newtopic-button'>
               <button className='newtopic-button-create'>Create</button>
-              <button className='newtopic-button-close'>Close</button>
+              <a href ="/"><button className='newtopic-button-close'>Close</button></a>
             </div>
 
           </div>

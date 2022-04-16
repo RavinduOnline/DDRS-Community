@@ -67,7 +67,7 @@
 }
 
 .newtopic-title-title input{
-    padding-right: 280px;
+    min-width: 70%;
     font-weight: 600;
 }
 
@@ -87,8 +87,7 @@
 .newtopic-react-quill{
     margin: 10px 0px;
     height: auto;
-    border-radius: 10px;
-    
+    border-radius: 10px;    
 }
 
 /*
@@ -129,9 +128,9 @@
 .newtopic-button-close{ 
     float: right;
     margin-right: 40px;
-    background-color: #e15b3a;
+    background-color: #ea4335;
 }
 
 .newtopic-button-close:hover{
-    background-color: #d37057;
+    background-color: #e95144;
   }

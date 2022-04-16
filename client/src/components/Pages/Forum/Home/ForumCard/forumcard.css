@@ -31,6 +31,10 @@
     color: #001925;
   }
 
+  .forumcard-container a{
+    text-decoration: none;
+  }
+
   .forumcard-category-box{
     padding: 0 5px;
     color: white;

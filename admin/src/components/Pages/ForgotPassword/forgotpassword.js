@@ -1,15 +1,16 @@
 import React from 'react'
+import './forgotpassword.css'
 import DarkLogo from '../../SideMenu/DDRS-Logo_DarkBlue.png'
 
 
-export default function foggetpassword() {
+export default function forgotpassword() {
   return (
     <div>
         {/* -------- All CSS connected from Login Sidebar CSS file -------- */}
 
-      <div className='Sidebar-body-box'>
+      <div className='FogPassword-body-box'>
       
-              <div className='sidebar-body-box-2'></div>
+              <div className='fogPassword-body-box-2'></div>
 
 
               <nav className="sidebar-mainbox"> 

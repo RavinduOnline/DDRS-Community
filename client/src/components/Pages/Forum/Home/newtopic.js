@@ -28,9 +28,13 @@ export default function home() {
                       <select>
                           <option value="" selected="selected">Select forum category</option>
                           <option value="" >General</option>
-                          <option value="" >Bugs</option>
+                          <option value="" >JavaScript</option>
+                          <option value="" >HTML/CSS</option>
+                          <option value="" >Backend</option>
+                          <option value="" >Frontend</option>
                           <option value="" >Other</option>
                       </select>
+                      
                     </div>
                   </div>
                 </div>
@@ -59,16 +63,6 @@ export default function home() {
           </div>
 
         </div>
-
-
-
-
-
-
-
-
-
-
 
         <Footer/>
     </div>

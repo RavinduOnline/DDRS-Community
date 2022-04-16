@@ -12,7 +12,7 @@ export default function home() {
         
 
         <div>
-          <form className="home-form-flex">
+          <form >
             <input id="home-searchNav" type="search" placeholder="Search" aria-label="Search" /> 
           </form>
         </div>
@@ -25,10 +25,13 @@ export default function home() {
             <button className='home-filter-btn' onclick="filterSelection('latest')"> Latest</button>
           </div>
 
-          <button className='home-new-btn'>
-            <i class="fa-solid fa-plus"></i>&nbsp;&nbsp;NEW TOPIC
-          </button>  
-           
+          <a href ="/add-forum">
+            <button className='home-new-btn'>
+              <i class="fa-solid fa-plus"></i>&nbsp;&nbsp;NEW TOPIC
+            </button>
+          </a>   
+          
+
           <div className='home-topic-txt'>
             <h6 className='home-topic-txt-topic'>Topic</h6>
             <h6 className='home-topic-txt-reply'>Reply</h6>

@@ -24,11 +24,7 @@ export default function forumcreate() {
           <p>I'm bit annoyed that the ENTSO-E only provides XML responses and no JSON formats for their API. Does anyone have experienced with converting text/xml responses to data frames in R? I usually use @data_life Sorry there was a typo in the lapps () definition, which I corrected. One shouldn't name variables with the same name as a function. "file" in this case. Sometimes, I should take my own advise :)-
         </p>
 
-        <img
-className="header-logo"
-src={Logo}
-alt="DDRS Logo"
-loading="lazy">
+        <img className="header-logo" src="../ForumImage/forum01.png" alt="error Image"/>
 
         </div>
 

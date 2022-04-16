@@ -26,6 +26,10 @@
   .forumcard-container {
     padding: 2px 16px;
   }
+  
+  .forumcard-container h4{
+    color: #001925;
+  }
 
   .forumcard-category-box{
     padding: 0 5px;

@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../../../Header/header'
 import ForumCard from '../Home/ForumCard/forumcard'
 import './home.css'
+import './newtopic'
 import Footer from '../../../Footer/footer'
 
 export default function home() {

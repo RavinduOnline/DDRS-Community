@@ -29,7 +29,7 @@ export default function forgotpassword() {
                         <div className='side-bar-down-box'>
                                 {/* <!-- Down elements --> */}
                                         <div className="side-bar-title">
-                                            Reset Password
+                                            Forgot Password
                                         </div>
 
                                         <div className="side-bar-item">

@@ -1,6 +1,8 @@
 import React from 'react'
 import './menu.css'
 import Logo from "./DDRS-Logo_White.png"
+import {Link} from 'react-router-dom'
+
 
 
 export default function menu() {
@@ -29,22 +31,23 @@ export default function menu() {
 
             <div>
                      {/* <!-- Down elements --> */}
-                             <div className="side-menu-item">
-                                    <a className='nav-link text-white text-uppercase' href="/">
-                                        Dashboard
-                                    </a>
-                            </div>
+                             <Link className='nav-link text-white text-uppercase' to="/">
+                                    <div className="side-menu-item">
+                                                Dashboard
+                                    </div>
+                            </Link>
                     
-                            <div className="side-menu-item">
-                                    <a className='nav-link text-white text-uppercase' href="/#About">
+                            <Link className='nav-link text-white text-uppercase' to="/topicmanagement"> 
+                                    <div className="side-menu-item">
                                         Topics
-                                    </a>
-                            </div>
-                            <div className="side-menu-item">
-                                    <a className='nav-link text-white text-uppercase' href="/#Skills">
-                                        Word Filter
-                                    </a>
-                            </div>
+                                    </div>
+                            </Link>
+
+                            <Link className='nav-link text-white text-uppercase' to="/wordfilter">
+                                    <div className="side-menu-item">
+                                                Word Filter
+                                    </div>
+                            </Link>
             </div>
 
       </nav>

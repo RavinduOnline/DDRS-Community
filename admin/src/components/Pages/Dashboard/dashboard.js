@@ -22,17 +22,17 @@ export default function dashboard() {
             <div className='Home-detail-box-container'>
 
                   <div className='Home-detail-box User-box'>
-                    <h2>Total Users</h2>
+                    <h2><i className="fa-solid fa-users"></i> Total Users</h2>
                     <p>80</p>
                   </div>
 
                   <div className='Home-detail-box Topic-box'>
-                    <h2>Total Topics</h2>
+                    <h2><i className="fa-solid fa-file-signature"></i> Total Topics</h2>
                     <p>124</p>
                   </div>
 
                   <div className='Home-detail-box Reply-box'>
-                    <h2>Total Replies</h2>
+                    <h2><i class="fa-solid fa-reply-all"></i> Total Replies</h2>
                     <p>121</p>
                   </div>
             </div>

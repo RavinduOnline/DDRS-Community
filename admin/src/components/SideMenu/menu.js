@@ -19,7 +19,7 @@ export default function menu() {
           </div> 
 
             <div className='sidemenu-avatar-sub-box'>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRk5HT_MiST8gvuAiCijxgSvKCFtpJPMh7Yvlxc5ZTqfKGuVAAsEls2By-MBbrk0Ncxx4&usqp=CAU" />
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRk5HT_MiST8gvuAiCijxgSvKCFtpJPMh7Yvlxc5ZTqfKGuVAAsEls2By-MBbrk0Ncxx4&usqp=CAU" alt='profile-pic' />
                 <p>Janith Dilshan</p> 
                 <a  href="/"><i className="fa-solid fa-right-from-bracket"></i></a>
             </div>

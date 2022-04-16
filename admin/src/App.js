@@ -3,6 +3,7 @@ import {BrowserRouter, Router , Routes , Route} from "react-router-dom"
 
 import Home from './components/Pages/Dashboard/dashboard';
 import SignIn from './components/Pages/SignIn/signin';
+import FoggetPassword from './components/Pages/FoggetPassword/foggetpassword';
 import NotFound from './components/Pages/404/notfound';
 
 
@@ -12,7 +13,8 @@ function App() {
     <BrowserRouter>
         <Routes>
               <Route exact path="/" element={<Home/>}/>
-              <Route exact path="/signup" element={<SignIn/>}/>
+              <Route exact path="/login" element={<SignIn/>}/>
+              <Route exact path="/foggetpassword" element={<FoggetPassword/>}/>
               <Route path="*" element={<NotFound/>}/>
         </Routes>
     </BrowserRouter>

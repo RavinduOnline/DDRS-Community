@@ -10,7 +10,7 @@ export default function dashboard() {
 
         <SideMenu/>
 
-       <div className='Home-main-body-container'>
+       <div className='main-body-container'>
             <div className='Home-sub-body-container'>
 
               <h1 className='text-uppercase' >Dashboard</h1>

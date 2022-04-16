@@ -31,9 +31,6 @@ export default function topictable() {
                         <td className='Top-table-dashboard-td'>30</td>
                       </tr>
                   </tbody>
-
-
-                  
                 </table>
         </div>
 

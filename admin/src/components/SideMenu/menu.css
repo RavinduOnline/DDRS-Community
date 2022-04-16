@@ -73,7 +73,9 @@
 .side-menu-item :hover{
     background-color: #044F74 ;
     width: 100%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
+}
+
+.side-menu-link :hover{
+    background-color: #044F74 ;
+    width: 100%;
 }

@@ -31,19 +31,19 @@ export default function menu() {
 
             <div>
                      {/* <!-- Down elements --> */}
-                             <Link className='nav-link text-white text-uppercase' to="/">
+                            <Link className='side-menu-link nav-link text-white text-uppercase' to="/">
                                     <div className="side-menu-item">
                                                 Dashboard
                                     </div>
                             </Link>
                     
-                            <Link className='nav-link text-white text-uppercase' to="/topicmanagement"> 
+                            <Link className='side-menu-link nav-link text-white text-uppercase' to="/topicmanagement"> 
                                     <div className="side-menu-item">
-                                        Topics
+                                        Topic Management
                                     </div>
                             </Link>
 
-                            <Link className='nav-link text-white text-uppercase' to="/wordfilter">
+                            <Link className='side-menu-link nav-link text-white text-uppercase' to="/wordfilter">
                                     <div className="side-menu-item">
                                                 Word Filter
                                     </div>

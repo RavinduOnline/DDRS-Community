@@ -1,5 +1,7 @@
 
-.Home-main-body-container{
+/* Common CSS Box Start */
+
+.main-body-container{
     height: max-content;
     width: auto;
     display: flex;
@@ -7,6 +9,13 @@
     margin-left: 30vh;
     padding: 15px;
 }
+
+.Home-sub-body-hr-line {
+    height: 0.3vh;
+    background-color: #001925;
+}
+
+/* Common CSS Box End  */
 
 .Home-sub-body-container h1{
     font-size: 32px;
@@ -55,9 +64,4 @@
 
 .Reply-box{
     background-color: #F5BF52;
-}
-
-.Home-sub-body-hr-line {
-    height: 0.3vh;
-    background-color: #001925;
 }

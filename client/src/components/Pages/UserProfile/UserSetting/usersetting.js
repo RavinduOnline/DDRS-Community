@@ -25,6 +25,19 @@ export default function usersetting() {
               <td>Email</td>
               <td>janith@gmail.com</td>
             </tr>
+            <tr>
+              <td>Country</td>
+              <td>Sri Lanka</td>
+            </tr>
+            <tr>
+              <td>Gender</td>
+              <td>Mail</td>
+            </tr>
+
+            <button type="submit">Change Password</button><br/>
+            <button type="submit">Change details</button><br/>
+            <button type="submit">Disable Profile</button><br/>
+            <button type="submit">Download User details Report</button>
 
         </table>
 

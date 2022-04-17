@@ -3,6 +3,8 @@ import Header from '../../../Header/header'
 import Footer from '../../../Footer/footer'
 import './forumview.css'
 import Img from '../ForumImage/forum01.png'
+import ReplyHome  from '../../Reply/ReplyHome/ReplyHome'
+import replycard from '../../Reply/replycard/replycard'
 
 
 export default function forumview() {
@@ -38,8 +40,10 @@ export default function forumview() {
                 <hr/>
 
                 <div className='forumview-reply-card'>
-                    
+                   
                 </div>
+                
+                <ReplyHome/> 
             </div>
 
         <Footer/>

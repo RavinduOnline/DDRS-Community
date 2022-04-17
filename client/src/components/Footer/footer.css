@@ -5,6 +5,10 @@ footer {
     justify-content: center;
     background-color: #001925;
     color: white;
+    position: fixed;
+    height: 5vh;
+    width: 100%;
+    padding: 5px;
   }
 
   .footer-copyright{

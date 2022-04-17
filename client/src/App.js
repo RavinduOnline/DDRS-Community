@@ -8,6 +8,7 @@ import Profile from './components/Pages/UserProfile/Profile/profile'
 import UserSetting from './components/Pages/UserProfile/UserSetting/usersetting';
 import NewForum from './components/Pages/Forum/Home/newtopic';
 import ForumView from './components/Pages/Forum/ForumView/forumview';
+import ReplyUpdate from './components/Pages/Reply/replyupdate/replyupdate';
 import NotFound from './components/Pages/404/notfound';
 
 
@@ -22,7 +23,9 @@ function App() {
               <Route exact path="/usersetting" element={<UserSetting/>}/>
               <Route path="/add-forum" element={<NewForum/>}/>
               <Route path="/view-forum" element={<ForumView/>}/>
+              <Route path="/replyupdate" element={<ReplyUpdate/>}/>
               <Route path="*" element={<NotFound/>}/>
+
         </Routes>
     </BrowserRouter>
   );

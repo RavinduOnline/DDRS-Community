@@ -23,7 +23,7 @@ export default function replyupdate() {
 
           <div className='replyupdate-button'>
             <button className='replyupdate-button-create'>Edit</button>
-            <a href='/'><button className='replyupdate-button-close'>Cancel</button></a>
+            <a href='view-forum'><button className='replyupdate-button-close'>Cancel</button></a>
           </div>
           
 

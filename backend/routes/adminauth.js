@@ -10,7 +10,7 @@ router.get('/adminprotected', requireAdminLogin , (req, res)=>{
 
     res.send("Admin Verified")
   
-  });
+ });
 
 // Register Admin
 router.post("/adminsignup", async (req, res) => {

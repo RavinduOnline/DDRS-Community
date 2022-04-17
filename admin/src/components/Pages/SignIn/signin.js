@@ -2,7 +2,7 @@ import React from 'react'
 import Footer from '../../Footer/footer'
 import Sidebar from './LoginSidebar/sidebar'
 
-export default function signin() {
+ const Signin = () => {
   return (
 
     <div>
@@ -14,3 +14,5 @@ export default function signin() {
     </div>
   )
 }
+
+export default Signin

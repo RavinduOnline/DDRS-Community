@@ -1,0 +1,10 @@
+.center-signin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.signin-button {
+    border-radius: 10px;
+    justify-content: center;
+}

@@ -3,10 +3,12 @@ const mongoose = require('mongoose');
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const Admin = mongoose.model('Admin');
+const requireAdminLogin = require('../middleware/requireAdminLogin');
 
-router.get('/protected', (req, res)=>{
 
-    res.send("Hello User")
+router.get('/adminprotected', requireAdminLogin , (req, res)=>{
+
+    res.send("Admin Verified")
   
   });
 
@@ -39,5 +41,81 @@ router.post("/adminsignup", async (req, res) => {
         return res.status(400).json({ error: err.message });
   }
 });
+
+
+//SignIn(Login) Admin
+router.post("/adminlogin", async (req, res) => {
+
+  const {email, password } = req.body;
+
+  if(!email || !password){
+
+    return res.status(422).json({ error: "Please enter email or password"});
+
+  }
+
+  let savedAdmin = await Admin.findOne({ email:email });
+  if(!savedAdmin){
+
+    return res.status(422).json({ error: "Invalid Email or Password"});
+
+  }
+  else{
+    let doMatch = await bcrypt.compare(password,savedAdmin.password);
+    try{
+      if(doMatch){
+
+        const token = jwt.sign({_id:savedAdmin._id},process.env.JWT_SECRET);
+        res.json({token});        
+
+      }
+      else{
+        return res.json({ error: "Invalid Email or Password"});
+      }
+    }catch (err) {
+      console.log(err);
+      return res.status(400).json({ error: "Something is Wrong. Please try again later"  });
+    }
+  }
+
+});
+
+//SignIn(Login) Admin
+router.get("/admindashboard", async (req, res) => {
+
+  const {email, password } = req.body;
+
+  if(!email || !password){
+
+    return res.status(422).json({ error: "Please enter email or password"});
+
+  }
+
+  let savedAdmin = await Admin.findOne({ email:email });
+  if(!savedAdmin){
+
+    return res.status(422).json({ error: "Invalid Email or Password"});
+
+  }
+  else{
+    let doMatch = await bcrypt.compare(password,savedAdmin.password);
+    try{
+      if(doMatch){
+
+        const token = jwt.sign({_id:savedAdmin._id},process.env.JWT_SECRET);
+        res.json({token});        
+
+      }
+      else{
+        return res.json({ error: "Invalid Email or Password"});
+      }
+    }catch (err) {
+      console.log(err);
+      return res.status(400).json({ error: "Something is Wrong. Please try again later"  });
+    }
+  }
+
+});
+
 
 module.exports = router;

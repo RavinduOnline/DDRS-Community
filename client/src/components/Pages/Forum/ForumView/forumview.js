@@ -4,7 +4,6 @@ import Footer from '../../../Footer/footer'
 import './forumview.css'
 import Img from '../ForumImage/forum01.png'
 import ReplyHome  from '../../Reply/ReplyHome/ReplyHome'
-import replycard from '../../Reply/replycard/replycard'
 
 
 export default function forumview() {

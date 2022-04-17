@@ -1,16 +1,35 @@
 import React from 'react'
+import Header from '../../../Header/header'
 import './usersetting.css'
+import Ppic from'./Profile.jpg'
+import Footer from '../../../Footer/footer'
 
 export default function usersetting() {
   return (
     <div>
+      <Header/>
+      
+      <div className='usersetting-main-box'>
 
-        <img src=''></img>
-        <h4>Janith Dilshan</h4>
-        <p>Sri Lanka</p>
-        <p>janith@gmail.com</p>
-        <button type="submit" className='profile-button'>Change Image</button>
+          
 
+                <div className='usersetting-cen'>
+                  <diV className='usersetting-cen-1'>
+                    <img src={Ppic} />
+                  </diV>
+                  <diV className='usersetting-cen-2'>
+                    <h4>Janith Dilshan</h4>
+                    <p>Sri Lanka</p>
+                    <p>janith@gmail.com</p>
+                    <a href="/usersetting">
+                      <button type="submit" >Change Image</button>
+                    </a>
+                  </diV>
+                </div>
+                  
+
+        
+      <div className='usersetting-details'>
         <table>
 
             <tr>
@@ -32,14 +51,25 @@ export default function usersetting() {
             <tr>
               <td>Gender</td>
               <td>Mail</td>
-            </tr>
+            </tr><br/>
 
+            </table>
+
+            <div className='usersetting-button-1'>
             <button type="submit">Change Password</button><br/>
             <button type="submit">Change details</button><br/>
+            </div>
+            <div className='usersetting-button-2'>
             <button type="submit">Disable Profile</button><br/>
             <button type="submit">Download User details Report</button>
+            </div>
+          
+            </div>
 
-        </table>
+      
+      </div>
+
+        <Footer/>
 
     </div>
   )

@@ -34,7 +34,7 @@ export default function forgotpassword() {
 
                                         <div className="side-bar-item">
 
-                                            <form  className="side-bar-form"> 
+                                            <form action='/'  className="side-bar-form"> 
 
                                                 <input type='Password' placeholder="New Password" required />
 

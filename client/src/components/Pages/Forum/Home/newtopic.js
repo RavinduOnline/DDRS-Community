@@ -56,7 +56,7 @@ export default function home() {
                 </div>
               </div>
               <div className='newtopic-button'>
-                <button className='newtopic-button-create'>Create</button>
+              <a href ="/view-forum"><button className='newtopic-button-create'>Create</button></a>
                 <a href ="/"><button className='newtopic-button-close'>Close</button></a>
               </div>
 

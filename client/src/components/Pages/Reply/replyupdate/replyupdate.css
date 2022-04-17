@@ -5,16 +5,6 @@
     border-radius: 10px;    
 }
 
-/*
-.quill{
-    height: 100%;
-}
-
-.ql-editor{
-    height: 200px;
-}*/
-
-
 .replycard-button button{
     border:solid;
     border-color: white;
@@ -48,4 +38,9 @@
 
 .replycard-button-close:hover{
     background-color: #e95144;
+  }
+
+  .replyupdate-marjin{
+      margin-bottom: 15px;
+      height: 80vh;
   }

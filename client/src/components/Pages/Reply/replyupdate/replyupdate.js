@@ -11,8 +11,8 @@ export default function replyupdate() {
     <div>
         <Header/>
         
-
-        <h2>Janith Dilshan</h2>
+        <div className='replyupdate-marjin'>
+             <h2>Janith Dilshan</h2><br></br>
 
             <p><h4>Proxy does not work with the react build version</h4></p>
                  <ReactQuill className="replycard-react-quill" theme='snow'/>
@@ -21,14 +21,13 @@ export default function replyupdate() {
           
           
 
-          <div className='replyupdate-button'>
-            <button className='replyupdate-button-create'>Edit</button>
-            <a href='view-forum'><button className='replyupdate-button-close'>Cancel</button></a>
-          </div>
-          
+                 <div className='replyhome-button'>
+                     <a href='/view-forum'><button className='replyhome-button-create'>Post</button></a>
+                     <a href='/'><button className='replyhome-button-close'>Close</button></a>
+                 </div>
 
        
-
+          </div>
         <Footer/>
 
     </div>

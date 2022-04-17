@@ -11,7 +11,7 @@ const Sidebar = () => {
   const [email,setEmail] = useState("")
   const AdminLogin = ()=>{
       if(!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)){
-        alert("Wrong Email");
+        alert("Invalid Email");
           return
       }
       fetch("/adminlogin",{
@@ -80,7 +80,7 @@ const Sidebar = () => {
                                                  onChange={(e)=>setPasword(e.target.value)}
                                                 />
 
-                                                <button>Login</button>
+                                                <button onClick={AdminLogin}>Login</button>
 
                                             </form>
 

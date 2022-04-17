@@ -1,6 +1,7 @@
 import React from 'react'
 import './forumcard.css'
 import '../../ForumView/forumview'
+import '../../../Reply/replycard/replycard'
 
 export default function forumcard() {
   return (

@@ -1,20 +1,11 @@
 
-
-
-
-
-.ReplyHome-react-quill{
+.replycard-react-quill{
     margin: 10px 0px;
     height: auto;
-    border-radius: 10px; 
-    margin-right: 150px;  
-    margin-left: 20%; 
+    border-radius: 10px;    
 }
 
-
-
-
-.replyhome-button button{
+.replycard-button button{
     border:solid;
     border-color: white;
     border-width: 1px;
@@ -29,23 +20,27 @@
     margin-top: 10px;
 }
 
-.replyhome-button-create{ 
+.replycard-button-create{ 
     float: right;
     margin-right: 40px;
     background-color: #19224D;   
 }
 
-.replyhome-button-create:hover{
+.replycard-button-create:hover{
     background-color: #233381;
   }
 
-.replyhome-button-close{ 
+.replycard-button-close{ 
     float: right;
     margin-right: 40px;
     background-color: #ea4335;
 }
 
-.replyhome-button-close:hover{
+.replycard-button-close:hover{
     background-color: #e95144;
   }
 
+  .replyupdate-marjin{
+      margin-bottom: 15px;
+      height: 80vh;
+  }

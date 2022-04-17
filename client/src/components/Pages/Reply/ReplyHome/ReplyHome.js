@@ -15,9 +15,13 @@ export default function ReplyHome() {
           <hr/>
           <ReactQuill className="newtopic-react-quill" theme='snow'/>
           
+          
+          
 
-          <input type="submit" value="Delete"></input>
-          <input type="submit" value="Post"></input>
+          <div className='replyhome-button'>
+            <button className='replyhome-button-create'>Post</button>
+            <a href='/'><button className='replyhome-button-close'>Close</button></a>
+          </div>
           
 
       <Footer/>

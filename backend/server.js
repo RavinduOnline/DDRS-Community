@@ -1,13 +1,17 @@
 
-const express = require('express'); 
-const mongoose = require('mongoose'); 
+const express = require("express");
 const cors = require("cors");
-const bodyParser = require('body-parser');
+const path = require("path");
+const app = express();
+const mongoose = require('mongoose');
+const bodyParser = require("body-parser");
 require ("dotenv").config();
 
+//import routes
+require("./models/admin")
 
 
-const app = express();
+
 const PORT = process.env.PORT || "8000";   
 
 //DB Connection
@@ -24,16 +28,19 @@ mongoose
 //Middleware 
 app.use(bodyParser.json({ limit: "500mb" }));
 app.use(bodyParser.urlencoded({ extended: true, limit: "500mb" }));
+app.use(express.json());
 
-app.use(express.json())
-app.use(cors())
+app.use(require("./routes/adminauth"));
 
 app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "*");
-    next();
-  });
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "*");
+  next();
+});
 
+
+app.use("/uploads", express.static(path.join(__dirname, "/../uploads")));
+app.use(express.static(path.join(__dirname, "/../frontend/build")));
 
 
 // Routes
@@ -42,6 +49,7 @@ app.get("/", (req, res, next) =>{
     next();
 });
  
+app.use(cors());     
 
 app.listen(PORT, () =>{
     console.log(`🚀 Server is UP and running on PORT ${PORT }`)

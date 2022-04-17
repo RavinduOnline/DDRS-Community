@@ -5,7 +5,7 @@ export default function signupforum() {
   return (
     <div> 
 
-        <form>
+        <form action='/signin'>
           <div className='signup-details'>
             <h1>Welcome to.........!</h1>
                 <hr/>

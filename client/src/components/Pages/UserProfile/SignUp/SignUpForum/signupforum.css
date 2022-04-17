@@ -23,7 +23,7 @@
     border-radius: 5px;
 }
 
-.signup-input select{
-    padding: 5px;
+.signup-input input{
+    margin: 0px 5px 0px 5px;
 }
 

@@ -29,7 +29,7 @@ export default function signupforum() {
                   <tr>
                     <td className='signup-td'><label for="gender"><b>Gender<br/></b></label></td>
                     
-                    <td className='signup-td'>
+                    <td className='signup-input'>
                       <input type="radio" id="male" name="male" value="male"/>
                       <label for="male">Male</label>
                       <input type="radio" id="female" name="female" value="female"/>

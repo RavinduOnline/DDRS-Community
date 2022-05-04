@@ -64,10 +64,9 @@ router.post("/adminlogin", async (req, res) => {
     let doMatch = await bcrypt.compare(password,savedAdmin.password);
     try{
       if(doMatch){
-
         const token = jwt.sign({_id:savedAdmin._id},process.env.JWT_SECRET);
-        res.json({token});        
-
+        const {_id,fName,lName,email} = savedAdmin
+        res.json({token,admin:{_id,fName,lName,email}})
       }
       else{
         return res.json({ error: "Invalid Email or Password"});

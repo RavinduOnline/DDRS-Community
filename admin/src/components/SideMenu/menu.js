@@ -29,7 +29,7 @@ export default function menu() {
           </header>
           <hr/>
 
-            <div>
+            <div className='side-menu-a-div'>
                      {/* <!-- Down elements --> */}
                             <Link className='side-menu-link nav-link text-white text-uppercase' to="/">
                                     <div className="side-menu-item">

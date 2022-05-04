@@ -109,3 +109,9 @@
     margin-top: 10px;
     color: #001925;
 }
+
+.alert-login{
+    display: none;
+    justify-content: center;
+    align-items: center;
+}

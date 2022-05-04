@@ -70,12 +70,7 @@
     display: flex;
 }
 
-.side-menu-item :hover{
-    background-color: #044F74 ;
-    width: 100%;
-}
-
-.side-menu-link :hover{
+.side-menu-a-div :hover{
     background-color: #044F74 ;
     width: 100%;
 }

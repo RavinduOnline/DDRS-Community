@@ -7,9 +7,9 @@ In our group we planned to create community forum like Microsoft community/ stac
 | IT Number     | Name          | Function | 
 | ------------- | ------------- | -------- |
 | IT20189730    | Silva K.R.R   | Admin  |
-| IT20148454    | Dilshan A.J.Y.J Perera         | User Profile  |
+| IT20148454    | Dilshan A.J.Y.J         | User Profile  |
 | IT20049218    | Perera T.A.S.S         | Forum  |
-| IT20189730    | Mudalige D.L.M.         | Reply  |
+| IT20189730    | Mudalige D.L.M        | Reply  |
 
   <br>
 <b>Languages<b>

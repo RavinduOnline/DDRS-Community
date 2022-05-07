@@ -3,17 +3,16 @@ const mongoose=require('mongoose');
 const router = express.Router();
 const Forum = mongoose.model('Forum');
 
-router.get('/forumget',(req,res)=>{
-    res.send('Welcome to stackflow clone tutorial');
-})
+router.get('/forum', (req, res)=>{
+    res.send("Hi I'm Forum Get Method")
+  
+ });
 
-
-    router.post("/forumcreate", async (req, res) => {
-
-
-    const { Title, FCategory, Description,Body } = req.body;
-    try {
-        if(!Title || !FCategory || !Description || !Body ){
+// Create
+router.post("/forumcreate", async (req, res) => {
+    const {Title, FCategory, Description, Body } = req.body;
+  try {
+        if(!Title || !FCategory || !Description || !Body){
             return res.status(422).json({ error: "Please fill all the field" });
         }
 
@@ -23,13 +22,10 @@ router.get('/forumget',(req,res)=>{
             Description,
             Body,
          });
-        const newForumCreate = await newForum.save()
-        if(newForumCreate){
-            return res.status(201).json({ message: "forum created successfully" });
+        const forumCreated = await newForum.save()
+        if(forumCreated){
+            return res.status(201).json({ message: "User created successfully" });
         } 
-        else{
-            return res.status(201).json({ message: "forum created err" });
-        }
 
     } catch (err) {
         console.log(err);

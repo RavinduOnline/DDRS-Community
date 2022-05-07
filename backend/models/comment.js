@@ -1,20 +1,16 @@
 const mongoose = require("mongoose");
-
-const replySchema = new mongoose.Schema({
+const CommentSchema = new mongoose.Schema({
+  //   commentID: String,
   forum_id: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Forums",
   },
-  reply: String,
+  comment: String,
   created_at: {
     type: Date,
     default: Date.now(),
   },
   user: Object,
-  comment_id: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "Comments",
-  },
 });
 
-module.exports = mongoose.model("Reply", replySchema);
+module.exports = mongoose.model("Comments", CommentSchema);

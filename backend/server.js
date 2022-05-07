@@ -10,6 +10,8 @@ require ("dotenv").config();
 //import routes
 require("./models/admin")
 require("./models/forum")
+require("./models/profile")
+
 
 
 const PORT = process.env.PORT || "8000";   
@@ -32,6 +34,7 @@ app.use(express.json());
 
 app.use(require("./routes/adminauth"));
 app.use(require("./routes/forum"));
+app.use(require("./routes/adminmanage"));
 
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");

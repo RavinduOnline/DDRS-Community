@@ -49,7 +49,7 @@ export default function signupforum() {
                   <td className='signup-td'><lable for="country"><b>Country</b></lable></td>
                     <td>
                       <select name="country" id="country">
-                        <option value="united kingdom">United Kingdom</option>
+                        <option value="united kingdom">Sri Lanka</option>
                         <option value="united states">United States</option>
                         <option value="australia">Australia</option>
                         <option value="japan">Japan</option>

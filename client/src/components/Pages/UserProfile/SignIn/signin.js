@@ -12,7 +12,7 @@ export default function signin() {
 
         <div className='sigin-form-body-box'></div>
               <div className='sigin-form-box'>
-                    <form>
+                    <form action='./'>
                         <h4>Hi....</h4>
                         <label for="fname">User Name</label><br/>
                         <input type="text" id="fname" name="fname"/><br/><br/>

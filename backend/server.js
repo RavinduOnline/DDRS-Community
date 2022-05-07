@@ -54,3 +54,6 @@ app.use(cors());
 app.listen(PORT, () =>{
     console.log(`🚀 Server is UP and running on PORT ${PORT }`)
 });
+
+const userRouter=require("./routes/profileauth.js");
+app.use("/user",userRouter)

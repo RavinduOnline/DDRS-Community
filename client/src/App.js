@@ -6,6 +6,8 @@ import SignUp from './components/Pages/UserProfile/SignUp/signup'
 import SignIn from './components/Pages/UserProfile/SignIn/signin'
 import Profile from './components/Pages/UserProfile/Profile/profile'
 import UserSetting from './components/Pages/UserProfile/UserSetting/usersetting';
+import ResetPassword from './components/Pages/UserProfile/ResetPassword/resetpassword';
+import UpdateProfile from './components/Pages/UserProfile/UpdateProfile/updateprofile';
 import NewForum from './components/Pages/Forum/Home/newtopic';
 import ForumView from './components/Pages/Forum/ForumView/forumview';
 import ReplyUpdate from './components/Pages/Reply/replyupdate/replyupdate';
@@ -21,6 +23,8 @@ function App() {
               <Route exact path="/signin" element={<SignIn/>}/>
               <Route exact path="/profile" element={<Profile/>}/>
               <Route exact path="/usersetting" element={<UserSetting/>}/>
+              <Route exact path="/resetpassword" element={<ResetPassword/>}/>
+              <Route exact path="/updateprofile" element={<UpdateProfile/>}/>
               <Route path="/add-forum" element={<NewForum/>}/>
               <Route path="/view-forum" element={<ForumView/>}/>
               <Route path="/replyupdate" element={<ReplyUpdate/>}/>

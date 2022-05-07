@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const forumSchema = new mongoose.Schema({
     Title:{
         type:String,
+        trim: true,
         required: true,
     },
 
@@ -13,24 +14,18 @@ const forumSchema = new mongoose.Schema({
 
     Description:{
         type:String,
+        trim: true,
         required: true, 
     },
-    
+
     Body:{
         type:String,
+        trim: true,
         required: true,
     },
 
-    Created_at:{
-        type:Date,
-        default: Date.now()
-    },
-
-    user:Object,
-
     Comment_id:{
-        type:mongoose.Schema.Types.ObjectId,
-        ref:"Comments"
+        type:String,
     },
 
 },

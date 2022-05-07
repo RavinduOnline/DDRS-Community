@@ -9,7 +9,7 @@ require ("dotenv").config();
 
 //import routes
 require("./models/admin")
-
+require("./models/forum")
 
 
 const PORT = process.env.PORT || "8000";   
@@ -31,6 +31,7 @@ app.use(bodyParser.urlencoded({ extended: true, limit: "500mb" }));
 app.use(express.json());
 
 app.use(require("./routes/adminauth"));
+app.use(require("./routes/forum"));
 
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");

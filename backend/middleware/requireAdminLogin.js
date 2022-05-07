@@ -19,7 +19,6 @@ module.exports = (req,res,next)=>{
             req.admin = admindata
             next()
         })
-         
-        
+                 
     })
 }

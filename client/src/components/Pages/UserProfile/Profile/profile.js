@@ -61,7 +61,7 @@ export default function profile() {
 
         <div className='profile-card-container'>
           <ForumCard/>
-        </div>
+        </div> 
 
         <Footer/>
 

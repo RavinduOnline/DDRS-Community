@@ -12,6 +12,12 @@ require("./models/admin")
 require("./models/forum")
 require("./models/reply")
 require("./models/comment")
+require("./models/profile")
+require("./models/wordfilter")
+require("./models/reply")
+
+
+
 
 
 const PORT = process.env.PORT || "8000";   
@@ -36,7 +42,7 @@ app.use(require("./routes/adminauth"));
 app.use(require("./routes/forum"));
 app.use(require("./routes/reply"));
 app.use(require("./routes/comment"));
-
+app.use(require("./routes/adminmanage"));
 
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");

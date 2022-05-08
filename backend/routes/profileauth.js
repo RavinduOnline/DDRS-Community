@@ -102,22 +102,31 @@ router.get('/usersetting/:id',(req, res) => {
 
 // Reset password (Update)
 
-router.put('/resetpassword/:id',(req, res)=>{
-    User.findByIdAndUpdate(
-    req.params.id,
-    {
-        $set:req.body
-    },
-    (err,user)=>{
-        if(err){
-        return res.status(400).json({error:err});
-    }
+router.put('/resetpassword/:id', async (req, res)=>{
+    const {password, rePassword} = req.body;
+    let user = await User.findOne({ id:req.params.id });
+    
+    if (user) {
+        const hashedPassword = await bcrypt.hash(password, 10)
+        User.findByIdAndUpdate(
+            req.params.id,{
+                password:hashedPassword,
+                rePassword:hashedPassword,
+            },
+            (err,post)=>{
+                if(err){
+                    return res.status(400).json({
+                        error:err 
+                    });
+                }
 
-    return res.status(200).json({
-        success:"Updated Successfully"
-        });
-    }
-);
+                return res.status(200).json({
+                    success:"Password Update Successfully"
+                });
+            }
+        );
+      }
+
 
 });
 

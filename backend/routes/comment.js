@@ -1,32 +1,42 @@
 const express = require("express");
 
 const router = express.Router();
-const ReplyDB = require("../models/reply");
-const { param } = require("./reply");
+const CommentDB = require("../models/comment");
+const { param } = require("./comment");
 
 
-router.post('/:id', async (req,res) => {
-    try{
-        await CommentDB.create({
-            forum_id: req.params.id,
-            comment: req.body.comment,
-            user: req.body.user
-        }).then((doc) => {
-            res.status(201).send({
-                status: true,
-                message: "Comment added Successfully"
-            });
-        }).catch(() => {
-            res.status(400).send({
-                status:false,
-                message: "error while adding comment"
-            });
-        });
-    }catch (err){
-        res.status.(500).send({
-            status: false,
-            message: "Error while adding comment"
-        });
-    }
-});
 
+router.get('/comment' , (req, res)=>{
+
+    res.send("Commment Verified")
+  
+ });
+
+
+
+router.post('/comment/:id', async (req,res) => {
+
+    const {comment, user } = req.body;
+
+    
+        try{
+
+            newComment = new CommentDB({
+                forum_id : req.params.id,
+                comment, 
+                user,
+            })
+        
+            const commentCreate = await  newComment.save();
+            
+            if(commentCreate){
+                return res.status(201).json({ message: "Comment created successfully" });
+            } 
+        }catch{
+            return res.status(400).json({ error : "Comment not cerated"});
+            }
+        
+        })
+
+
+module.exports =  router;

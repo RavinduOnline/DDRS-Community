@@ -37,4 +37,46 @@ router.post('/replycreate',async (req,res) => {
 
 })
 
+
+//update wordfilter
+// router.put('/adminmanage/wordfilter/update/:id', async (req,res)=>{
+
+//     const {word, wcategory} = req.body;
+//   try {
+//         if(!word || !wcategory){
+//             return res.status(422).json({ error: "Please fill all the field" });
+//         }
+
+//         const lowerCaseWord = word.toLowerCase();
+//         let findWord = await WordFilter.findOne({ word:lowerCaseWord });
+//         if (findWord) {
+//           return res.status(400).json({ error: "This Word already exists" });
+//         }
+
+//         else{
+//             WordFilter.findByIdAndUpdate(
+//                 req.params.id,{
+//                     word:lowerCaseWord,
+//                     wcategory,
+//                 },
+//                 (err,post)=>{
+//                     if(err){
+//                         return res.status(400).json({
+//                             error:err 
+//                         });
+//                     }
+
+//                     return res.status(200).json({
+//                         success:"Word Filter Updated Successfully"
+//                     });
+//                 }
+//             );
+//         }
+
+//   }catch{
+
+//   }
+// });
+
+
 module.exports = router;

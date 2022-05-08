@@ -9,9 +9,9 @@ const User = require("../models/profile")
 // Register user
 
 router.post("/signup", async (req, res) => {
-    const {fName, lName, email, password } = req.body;
+    const {fName, lName, email, gender, interested, country, password, rePassword } = req.body;
   try {
-        if(!fName || !lName || !email || !password){
+        if(!fName || !lName || !email || !gender || !interested || !country || !password || !rePassword){
             return res.status(422).json({ error: "Please fill all the field" });
         }
         let user = await User.findOne({ email:email });
@@ -24,7 +24,11 @@ router.post("/signup", async (req, res) => {
             fName,
             lName,
             email,
+            gender,
+            interested,
+            country,
             password:hashedPassword,
+            rePassword:hashedPassword,
          };
          const user1=new User(newUser);
          await user1.save();
@@ -67,7 +71,7 @@ router.get('/signin', async (req,res) => {
             console.log(err)
         })
     })
-})
+});
 
 
 

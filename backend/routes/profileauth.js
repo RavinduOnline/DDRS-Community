@@ -149,4 +149,23 @@ router.put('/updateprofile/:id',(req, res)=>{
 
 
 
+
+// Disable profile (Delete)
+
+router.delete('/disableprofile/:id',(req, res)=>{
+    User.findByIdAndRemove(req.params.id).exec((err,deleteduser) =>{
+
+    if (err) return res.status(400).json({
+        message:"Delete Unsuccessful",err
+    });
+
+    return res.json({
+        message:"Delete Successfull",deleteduser
+        });
+    });
+});
+
+
+
+
 module.exports = router

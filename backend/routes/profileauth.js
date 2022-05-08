@@ -6,7 +6,7 @@ const User = require("../models/profile")
 
 
 
-// Register user
+// Register user (Create)
 
 router.post("/signup", async (req, res) => {
     const {fName, lName, email, gender, interested, country, password, rePassword } = req.body;
@@ -46,7 +46,7 @@ router.post("/signup", async (req, res) => {
 
 
 
-// login user
+// login user (Retrieve)
 
 router.get('/signin', async (req,res) => {
     const {email,password} = req.body;
@@ -77,7 +77,7 @@ router.get('/signin', async (req,res) => {
 
 
 
-// Retrieve user details
+// User details (Retrieve)
 
 router.get('/usersetting/:id',(req, res) => {
 
@@ -93,6 +93,32 @@ router.get('/usersetting/:id',(req, res) => {
         user
         });
     });
+
+});
+
+
+
+
+
+// Reset password (Update)
+
+router.put('resetpassword/:id',(req, res)=>{
+
+    User.findByIdAndUpdate(req.params.id,
+        {
+            $set:req.body
+        },
+
+    (err,post)=>{
+        if(err){
+        return res.status(422).json({error:err});
+    }
+
+    return res.status(422).json({
+        success:"Up"
+        });
+    }
+);
 
 });
 

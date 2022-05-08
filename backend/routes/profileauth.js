@@ -44,8 +44,8 @@ router.post("/signup", async (req, res) => {
 
 // login user
 
-router.post('/signin',(req,res)=>{
-    const {email,password} = req.body
+router.get('/signin', async (req,res) => {
+    const {email,password} = req.body;
     if(!email || !password){
         res.status(422).json({error:"Please add email or password"})
     }

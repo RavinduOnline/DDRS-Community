@@ -86,14 +86,11 @@ router.post("/adminmanage/wordfilter/create", async (req, res) => {
 router.get('/adminmanage/wordfilter', async (req,res)=>{
     
     try{
-        //Display the date in descending order in using commenting count
-        const wordfilterData = await WordFilter.find();
-            
-            return res.status(200).json({
-                success:true,
-                existingWordFilterData:wordfilterData
-            });
-
+        WordFilter.find().then((WordsList)=>{
+            res.status(200).json(WordsList)
+        }).catch((err)=>{
+            console.log(err);
+        })
     }catch{
         return res.status(400).json({ error: "Can't Find the top forum data" });
     }

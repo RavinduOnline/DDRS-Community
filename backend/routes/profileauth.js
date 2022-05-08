@@ -124,4 +124,29 @@ router.put('/resetpassword/:id',(req, res)=>{
 
 
 
+
+// Update profile (Update)
+
+router.put('/updateprofile/:id',(req, res)=>{
+    User.findByIdAndUpdate(
+    req.params.id,
+    {
+        $set:req.body
+    },
+    (err,user)=>{
+        if(err){
+        return res.status(400).json({error:err});
+    }
+
+    return res.status(200).json({
+        success:"Updated Successfully"
+        });
+    }
+);
+
+});
+
+
+
+
 module.exports = router

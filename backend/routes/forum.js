@@ -23,7 +23,7 @@ router.post("/forumcreate", async (req, res) => {
          });
         const forumCreated = await newForum.save()
         if(forumCreated){
-            return res.status(201).json({ message: "User created successfully" });
+            return res.status(201).json({ message: "Forum created successfully" });
         } 
 
     } catch (err) {

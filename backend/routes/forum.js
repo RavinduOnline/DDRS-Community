@@ -115,85 +115,26 @@ router.get("/forumget", async (req, res) => {
       });
   });
   
-  router.get("forumget/:id", async (req, res) => {
-    try {
-      // const question = await QuestionDB.findOne({ _id: req.params.id });
-      // res.status(200).send(question);
-      Forum.aggregate([
-        {
-          $match: { _id: mongoose.Types.ObjectId(req.params.id) },
-        },
-        {
-          $lookup: {
-            from: "reply",
-            let: { forum_id: "$_id" },
-            pipeline: [
-              {
-                $match: {
-                  $expr: {
-                    $eq: ["$forum_id", "$$forum_id"],
-                  },
-                },
-              },
 
-              {
-                $project: {
-                  _id: 1,
-                  user: 1,
-                  reply: 1,
-                  // created_at: 1,
-                  forum_id: 1,
-                  Created_at: 1,
-                },
-              },
-            ],
-            as: "replyDetails",
-          },
-        },
-        {
-          $lookup: {
-            from: "comments",
-            let: { forum_id: "$_id" },
-            pipeline: [
-              {
-                $match: {
-                  $expr: {
-                    $eq: ["$forum_id", "$$forum_id"],
-                  },
-                },
-              },
-              {
-                $project: {
-                  _id: 1,
-                  forum_id: 1,
-                  user: 1,
-                  Comment: 1,
-                  // created_at: 1,
-                  // question_id: 1,
-                  Created_at: 1,
-                },
-              },
-            ],
-            as: "comments",
-          },
-        },
-        {
-          $project: {
-            __v: 0,
-          },
-        },
-      ])
-        .exec()
-        .then((forumDetails) => {
-          res.status(200).send(forumDetails);
-        })
-        .catch((e) => {
-          console.log("Error: ", e);
-          res.status(400).send(error);
-        });
+  router.get("/forumget/one/:id", async (req, res) => {
+    try {
+      let forumId = req.params.id;
+      console.log(forumId);
+  
+      Forum.findById(forumId,(err,post)=>{
+        if(err){
+          return res.status(400).json({
+              success:false, err
+          });
+      }
+      return res.status(200).json({
+          success:true, post
+      });
+    }) ;
+
     } catch (err) {
         console.log(err)
-      res.status(400).send({
+       res.status(400).send({
         message: "Forum not found",
       });
     }

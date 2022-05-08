@@ -10,6 +10,8 @@ require ("dotenv").config();
 //import routes
 require("./models/admin")
 require("./models/forum")
+require("./models/reply")
+require("./models/comment")
 require("./models/profile")
 require("./models/wordfilter")
 require("./models/reply")
@@ -38,6 +40,8 @@ app.use(express.json());
 
 app.use(require("./routes/adminauth"));
 app.use(require("./routes/forum"));
+app.use(require("./routes/reply"));
+app.use(require("./routes/comment"));
 app.use(require("./routes/adminmanage"));
 
 app.use((req, res, next) => {

@@ -1,7 +1,7 @@
 const express = require("express");
 
 const router = express.Router();
-const ReplyDB = require("../models/reply");
+const Reply = require("../models/reply");
 
 
 
@@ -14,24 +14,27 @@ router.get('/reply' , (req, res)=>{
 
 
 router.post('/replycreate',async (req,res) => {
-    const replyData = new ReplyDB({
-        forum_id: req.body.forum_id,
-        reply: req.body.reply,
-        user: req.body.user
-    })
 
 
-    await replyData.save().then((doc) =>{
-        res.status(201).send({
-            status: true,
-            data: doc
-        })
-    }).catch((err) => {
-        res.status(400).send({
-            status: false,
-            message: "Error while adding reply"
-        })
+    const { forum_id, reply, user } = req.body;
+
+    try{
+
+    newReply = new Reply({
+        forum_id,
+        reply,
+        user,
     })
+
+    const replyCreate = await  newReply.save();
+    
+    if(replyCreate){
+        return res.status(201).json({ message: "Reply created successfully" });
+    } 
+}catch{
+    return res.status(400).json({ error : "Reply not cerated"});
+    }
+
 })
 
 module.exports = router;

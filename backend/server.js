@@ -12,6 +12,8 @@ require("./models/admin")
 require("./models/forum")
 require("./models/profile")
 require("./models/wordfilter")
+require("./models/reply")
+
 
 
 

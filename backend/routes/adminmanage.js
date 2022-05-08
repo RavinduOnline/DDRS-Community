@@ -2,6 +2,7 @@ const router = require("express").Router();
 const mongoose = require('mongoose'); 
 const User = mongoose.model('User');
 const Forum = mongoose.model('Forum');
+const Reply = mongoose.model('Reply');
 const WordFilter = mongoose.model('WordFilter');
 
 
@@ -13,11 +14,13 @@ router.get('/admindashboard/countdata', async (req, res)=>{
         try{
             const userCount = await User.countDocuments();
             const forumCount = await Forum.countDocuments();
+            const replyCount = await Reply.countDocuments();
 
             console.log(userCount)
             return res.status(200).json({ 
                       userCount, 
                       forumCount,
+                      replyCount,
             });
 
         }catch{

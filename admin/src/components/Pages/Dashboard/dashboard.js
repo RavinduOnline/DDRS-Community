@@ -57,7 +57,7 @@ export default function Dashboard (){
 
                                 <div className='Home-detail-box Reply-box'>
                                   <h2><i class="fa-solid fa-reply-all"></i> Total Replies</h2>
-                                  <p>121</p>
+                                  <p>{countdata.replyCount}</p>
                                 </div>
 
             </div>

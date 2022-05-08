@@ -6,12 +6,12 @@ const User = require("../models/profile")
 
 
 
-// Register user
+// Register user (Create)
 
 router.post("/signup", async (req, res) => {
-    const {fName, lName, email, password } = req.body;
+    const {fName, lName, email, gender, interested, country, password, rePassword } = req.body;
   try {
-        if(!fName || !lName || !email || !password){
+        if(!fName || !lName || !email || !gender || !interested || !country || !password || !rePassword){
             return res.status(422).json({ error: "Please fill all the field" });
         }
         let user = await User.findOne({ email:email });
@@ -24,7 +24,11 @@ router.post("/signup", async (req, res) => {
             fName,
             lName,
             email,
+            gender,
+            interested,
+            country,
             password:hashedPassword,
+            rePassword:hashedPassword,
          };
          const user1=new User(newUser);
          await user1.save();
@@ -42,10 +46,10 @@ router.post("/signup", async (req, res) => {
 
 
 
-// login user
+// login user (Retrieve)
 
-router.post('/signin',(req,res)=>{
-    const {email,password} = req.body
+router.get('/signin', async (req,res) => {
+    const {email,password} = req.body;
     if(!email || !password){
         res.status(422).json({error:"Please add email or password"})
     }
@@ -67,7 +71,109 @@ router.post('/signin',(req,res)=>{
             console.log(err)
         })
     })
-})
+});
+
+
+
+
+
+// User details (Retrieve)
+
+router.get('/usersetting/:id',(req, res) => {
+
+    let userId = req.params.id;
+
+    User.findById(userId,(err,user)=>{
+        if(err){
+            return res.status(400).json({success:false,err});
+        }
+
+        return res.status(200).json({
+        success:true,
+        user
+        });
+    });
+
+});
+
+
+
+
+
+// Reset password (Update)
+
+router.put('/resetpassword/:id', async (req, res)=>{
+    const {password, rePassword} = req.body;
+    let user = await User.findOne({ id:req.params.id });
+    
+    if (user) {
+        const hashedPassword = await bcrypt.hash(password, 10)
+        User.findByIdAndUpdate(
+            req.params.id,{
+                password:hashedPassword,
+                rePassword:hashedPassword,
+            },
+            (err,post)=>{
+                if(err){
+                    return res.status(400).json({
+                        error:err 
+                    });
+                }
+
+                return res.status(200).json({
+                    success:"Password Update Successfully"
+                });
+            }
+        );
+      }
+
+
+});
+
+
+
+
+
+// Update profile (Update)
+
+router.put('/updateprofile/:id',(req, res)=>{
+    User.findByIdAndUpdate(
+    req.params.id,
+    {
+        $set:req.body
+    },
+    (err,user)=>{
+        if(err){
+        return res.status(400).json({error:err});
+    }
+
+    return res.status(200).json({
+        success:"Updated Successfully"
+        });
+    }
+);
+
+});
+
+
+
+
+
+// Disable profile (Delete)
+
+router.delete('/disableprofile/:id',(req, res)=>{
+    User.findByIdAndRemove(req.params.id).exec((err,deleteduser) =>{
+
+    if (err) return res.status(400).json({
+        message:"Delete Unsuccessful",err
+    });
+
+    return res.json({
+        message:"Delete Successfull",deleteduser
+        });
+    });
+});
+
 
 
 

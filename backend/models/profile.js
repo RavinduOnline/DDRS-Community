@@ -17,7 +17,27 @@ const userSchema = new mongoose.Schema(
         trim: true,
         required: true,
       },
+      gender: {
+        type: String,
+        trim: true,
+        required: true,
+      },
+      interested: {
+        type: String,
+        trim: true,
+        required: true,
+      },
+      country: {
+        type: String,
+        trim: true,
+        required: true,
+      },
       password: {
+        type: String,
+        trim: true,
+        required: true,
+      },
+      rePassword: {
         type: String,
         trim: true,
         required: true,

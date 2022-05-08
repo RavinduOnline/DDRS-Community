@@ -16,8 +16,8 @@ router.get('/admindashboard/countdata', async (req, res)=>{
 
             console.log(userCount)
             return res.status(200).json({ 
-                userCount, 
-                forumCount 
+                      userCount, 
+                      forumCount,
             });
 
         }catch{

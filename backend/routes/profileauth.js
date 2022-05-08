@@ -75,4 +75,28 @@ router.get('/signin', async (req,res) => {
 
 
 
+
+
+// Retrieve user details
+
+router.get('/usersetting/:id',(req, res) => {
+
+    let userId = req.params.id;
+
+    User.findById(userId,(err,user)=>{
+        if(err){
+            return res.status(400).json({success:false,err});
+        }
+
+        return res.status(200).json({
+        success:true,
+        user
+        });
+    });
+
+});
+
+
+
+
 module.exports = router
